@@ -8,18 +8,20 @@ using UnityEngine;
 public class Pokemon : ScriptableObject
 {
     // Common attributes for all Pokémon
+    public int number;
     public string name;
     public int level;
+    public Gender gender;
+    public PokemonType type;
     public int hp;
     public int atk;
     public int spatk;
     public int def;
     public int spdef;
     public int speed;
-    public int number;
-    public Gender gender;
-    public PokemonType type;
+    public Sprite image;
     public Moves[] moves;
+
 
     // Common behavior for all Pokémon
     public void Attack()

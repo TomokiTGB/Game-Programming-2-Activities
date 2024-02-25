@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PokemonInfoView : MonoBehaviour
@@ -18,7 +19,7 @@ public class PokemonInfoView : MonoBehaviour
     public TextMeshProUGUI defTMP;
     public TextMeshProUGUI spdefTMP;
     public TextMeshProUGUI speedTMP;
-
+    public Image image;
 
     public void OnEnable()
     {
@@ -36,6 +37,8 @@ public class PokemonInfoView : MonoBehaviour
         defTMP.text = pokemon.def.ToString();
         spdefTMP.text = pokemon.spdef.ToString();
         speedTMP.text = pokemon.speed.ToString();
+        image.sprite = pokemon.image;
+
     }
 
     public void ClearView()
